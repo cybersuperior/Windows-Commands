@@ -1,0 +1,15 @@
+--netstat is an often used windows command that displays statistics for all connections on a network
+--the -a option displays all active connections and ports
+--the -n tells the connection to be displayed numerically
+--the -o option is what displays the process ID for each connection 
+--the findstr says to look for any connection contains the follow
+--in this case the 3306 is representative of the port we are looking for
+
+netstat -ano | findstr :3306
+
+
+--taskkill is the windows command used to kill a task or process
+--/PID allows us to filter for the process with ID 5435
+-/F tells the process to be ended forcefully
+
+taskkill /PID 5435 /F
